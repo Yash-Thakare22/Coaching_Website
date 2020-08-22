@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Education</title>
+		<meta name="viewport" content="width=deice-width,initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript">
+	function validate()
+	{
+	  if(reg.sname.value=="")
+	  {
+	    alert("Please enter your Name");
+	    return false;
+	  }
+	  if(reg.fname.value=="")
+	  {
+	    alert("Please enter your Father's Name");
+	    return false;
+	  }
+	  if(reg.add.value=="")
+	  {
+	    alert("Please enter Address");
+	    return false;
+	  }
+	  if(reg.gen.value=="")
+	  {
+	    alert("Please enter Gender");
+	    return false;
+	  }
+	  if(reg.cou.value=="")
+	  {
+	    alert("Please select Course");
+	    return false;
+	  }
+	  if(reg.ip.value=="")
+	  {
+	    alert("Please select Integrated Program");
+	    return false;
+	  }
+	  if(reg.mob.value=="")
+	  {
+	    alert("Please enter your Mobile Number");
+	    return false;
+	  }
+	  if(reg.fmob.value=="")
+	  {
+	    alert("Please enter your Father's Mobile Number");
+	    return false;
+	  }
+	  if(reg.email.value=="")
+	  {
+	    alert("Please enter Email-ID");
+	    return false;
+	  }
+ 	  if(reg.uname.value=="")
+	  {
+	    alert("Please enter Username");
+	    return false;
+	  }
+	  if(reg.pwd.value=="")
+	  {
+	    alert("Please enter Password");
+	    return false;
+	  }
+	  if(reg.cpwd.value=="")
+	  {
+	    alert("Please enter Confirm Password");
+	    return false;
+	  }
+	  if(reg.pwd.value!=reg.cpwd.value)
+	  {
+	    alert("Password does not Match");
+	    return false;
+	  }
+	  return true;
+	}
+	</script>	
+	<style>
+	*{
+		box-sizing: border-box;
+	 }
+	body{
+		font: Arial;
+	}
+	header{
+		background-color: #0943a0;
+		padding: 10px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	#header1{
+		backgroundcolor: #0943a0;
+		color: white;
+		padding: 5px 
+		}
+	
+	.add .but{ 
+		border: none;
+		font-size:30px;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: #33363a;
+		font-family: inherit; /* Important for vertical align on mobile phones */
+		margin: 0; /* Important for vertical align on mobile phones */
+	} 
+	footer{
+		background-color: #0943a0;
+		padding: 10px;
+	}
+	table,th{
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	td{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#a{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#b{
+		text-align: center;
+		font-size: 25px;
+		color: #678;
+	}
+	#c{
+		text-align: center;
+		font-size: 19px;
+		color: #333;
+	}
+	#d{
+		background: lightblue;
+		text-align: center;
+		font-size: 40px;
+		color: red;
+	}
+/* Navbar container */
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		font-family: Arial;
+	}
+
+/* Links inside the navbar */
+	.navbar a {
+		float: left;
+		font-size: 16px;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.navbar a.active {
+		background-color: #0943a0;
+		color: white;
+	}
+/* The dropdown container */
+	.dropdown {
+		float: left;
+		overflow: hidden;
+	}
+
+/* Dropdown button */
+	.dropdown .dropbtn {
+		font-size: 16px; 
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+		font-family: inherit; /* Important for vertical align on mobile phones */
+		margin: 0; /* Important for vertical align on mobile phones */
+	}
+
+/* Add a red background color to navbar links on hover */
+	.navbar a:hover, .dropdown:hover .dropbtn {
+		background-color: white;
+		color: black;
+	}
+
+/* Dropdown content (hidden by default) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+		float: none;
+		color: white;
+		padding: 12px 10px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+/* Add a grey background color to dropdown links on hover */
+	.dropdown-content a:hover {
+	background-color: white;
+	color: black;
+	}
+
+/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+#side{
+position:fixed; 
+top:250px; 
+right:40px; 
+width:40px; 
+z-index:999;
+}
+#side ul.icon-side li{
+border: solid 2px #33363a;
+display: block;
+float: left;
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+text-align:center;
+background:#fff;
+}
+#side ul.icon-side li a.side-links:link,a.side-links:active,a.side-links:visited{
+display: block;
+float: left; 
+padding:15px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a.side-links:hover{
+display: block;
+float: left;
+padding:10px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+#side ul.icon-side li a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+#side ul.icon-side li a.side-links i.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-facebook{
+    color: #3B5998;
+    display: inline-block;
+}
+
+.fa-facebook:hover{
+background: #3B5998;
+color:#fff;
+}
+.fa-facebook::before {
+    content: "\f09a";
+}
+
+.fa-twitter{
+color: #4099FF;
+display:inline-block;
+}
+
+.fa-twitter:hover{
+background: #4099FF;
+color:#fff;
+}
+.fa-twitter::before {
+    content: "\f099";
+}
+
+.fa-youtube{
+color: #bd071d;
+display:inline-block;
+}
+
+.fa-youtube:hover{
+background: #bd071d;
+color:#fff;
+}
+.fa-youtube-play::before {
+    content: "\f16a";
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=int], input[type=email], input[type=varchar] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #0943a0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+</style>
+</head>
+
+<body>
+<header>
+<table align="center">
+<tr>
+<th><img src="logo.jpg" alt="logo" width=100 height="100"></th>
+<th id="header1" colspan="5">
+<table>
+<tr>
+<th>QUANTUM CLASSES</th>
+</tr>
+<tr>
+<td><p id="a">R-26,Opp. Railway Track, Zone-II,M.P Nagar, Bhopal(M.P)-462011</p></td>
+</tr>
+</table>
+</th>
+</table>
+</header>
+<br>
+<div class="navbar">
+  <a href="wd.html">Home</a>
+  <a href="about.html">About us</a>
+  <div class="dropdown">
+    <a class="dropbtn"><a href="">Courses 
+      <i class="fa fa-caret-down"></i>
+    </a>
+    <div class="dropdown-content">
+      <a href="courses_mains.html">JEE(Mains)</a>
+      <a href="courses_adv.html">JEE(Adv.)</a>
+      <a href="courses_aipmt.html">AIPMT</a>
+      <a href="courses_aiims.html">AIIMS</a>
+    </div>
+  </div> 
+<a class="active" href="adm.html">Admission</a>
+<a href="fac.html">Faculties</a>
+	<div class="dropdown">
+  <a class="dropbtn">Login
+ <i class="fa fa-caret-down"></i></a>
+   <div class="dropdown-content">
+     <a href="slogin.html">Student Login</a>
+      <a href="alogin.html">Admin Login</a>
+</div>
+</div>
+<a href="faqs.html">FAQ's</a>
+</div>
+<br>
+<div id="side">
+<ul class="icon-side">
+<li>
+<a class="side-links facebook" href="#">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links twitter" href="#">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links youbute" href="#">
+<i class="fa fa-youtube">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<br>
+<table style="width:100%;">
+<tr>
+<td style="background-color:#333;color:white;font-size:40px;padding-top: 15px;padding-bottom: 15px;font-family: "Times New Roman", Times, serif;
+">
+WHY QUANTUM ?
+</td>
+</tr>
+<tr>
+<table>
+<tr style="width:100%">
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="4.jpg" width=60 height=60> Concept Building
+</th>
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="5.jpg" width=50 height=60> Complete Study Material
+</th>
+</tr>
+<tr style="width:100%">
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Batch wise classes are formed with a limited number of students. Lectures are designed according to board pattern 
+covering the depth of JEE Main/Advanced syllabus for Rankers Batch. In Master and Foundation batch lectures are delivered separately for NTSE / Olympiads 
+and School exams covering all the topics effectively with practice tests. Revision classes are arranged regularly for the benefit of students. Doubt 
+Clearing Sessions are regularly scheduled in Time Table and also separately arranged for those students who require extra assistance for clarification 
+of their doubts. These sessions are optional.
+</td>
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Our team developed the finest study material of different competitive, School and Board exams for class classes 5th 
+to 12th. Our study material comprises of more than 10,000 pages and 40,000 Questions with solutions. These specially designed study material develop writing
+ skill and understanding required for Board and School exams of the respective classes. Multi exercise booklet, designed according to the syllabus of JEE, 
+containing different types of conceptual, tricky and brain storming questions, including previous ten years JEE Main/Advanced questions, covering all the 
+possible problems of the area which may be asked in the forthcoming exams.
+</td>
+</tr>
+<br>
+<tr style="width:100%">
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="6.jpg" width=50 height=60> Timely Completion of Course
+</th>
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="7.jpg" width=50 height=60> Revision Program
+</th>
+</tr>
+<tr style="width:100%">
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Timely completion of course and topics are necessary to provide an ample 
+amount of time for the students to prepare well.
+</td>
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Revision program involves a quick & sharp review of the important topics which covers the 
+entire syllabus at a glance. Special test are also conducted on chapterwise topic as a part of revision program.
+</tr>
+<br>
+<tr style="width:100%">
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="8.jpg" width=50 height=60> Class Room Questions
+</th>
+<th style="background-color:#333;color:white;width:630px;align:center;"><img src="9.jpg" width=50 height=60> Test Series Programme
+</th>
+</tr style="width:100%">
+<tr>
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Prior to entering into the class, a comprehensive list of questions to be 
+dealt in the lecture is given to the students, as this helps to make-up their minds & creates awareness regarding the topic. This reflects the level of 
+sincerity and commitment which Mitesh Rathi Classes pledges.
+</td>
+<td style="color:#33363a;width:630px;padding-left: 15px;padding-right: 15px;">Quantum Classes has designed test series program for the benefit of students.
+ The entire test series program is for helping students to prepare for JEE Main/JEE Advanced/Board exams/Olympiads/NTSE/School exams.
+Mock JEE Test Series is based on advanced pattern and conducted for Rankers Batch.
+</td>
+</tr>
+</table>
+</tr>
+</table>
+<br>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;padding:20px;font-size:30px;background-color:#33363a;color:white;"
+>Admission Form <i class="fa fa-caret-right"></i></button>
+ 	
+<div id="id01" class="modal">
+  <form class="modal-content" name="reg" action="adm.php" onsubmit="return validate()" method="post">
+
+	<div class="container" style="background-color:#f1f1f1;padding:16px;">
+	      <label for="sname"><b>Student Name</b></label>
+	      <input type="text" placeholder="Enter your Name" name="sname" required>
+	
+	      <label for="Fname"><b>Father's Name </b></label>
+	      <input type="text" placeholder="Enter Father's Name" name="fname" required>
+
+	
+	      <label for="add"><b>Address</b></label>
+	      <input type="text" placeholder="Address" name="add" required>
+	        
+		
+
+	      <label for="gen"  style="padding:10px 10px 10px 0px;"><b>Gender</b></label>
+	      <input type="radio" name="gen" value="m" required>Male
+	      <input type="radio" name="gen" value="f" required>Female
+		<br>
+<br>
+	      <label for="cou"><b>Course</b></label>
+		<br>
+<br>
+			<select name="cou" style="padding:10px 16px;">
+    			<option value="mains">IIT-JEE(Mains)</option>
+    			<option value="advance">IIT-JEE(Advance)</option>
+    			<option value="aiims">AIIMS</option>
+    			<option value="aipmt">AIPMT</option>
+			<option value="just boards">JUST BOARDS</option>
+  			</select>
+		<br>
+<br>
+	      <label for="ip"><b>Integrated Program</b></label>
+		<br>
+<br>
+			<select name="ip" style="padding:10px 16px">
+    			<option value="4">4-year Integrated Program</option>
+    			<option value="3">3-year Integrated Program</option>
+    			<option value="2">2-year Integrated Program</option>
+    			<option value="1">1-year Integrated Program</option>
+			<option value="cc">Crash Course</option>
+  			</select>
+		<br>
+<br>
+	      <label for="mob"><b>Mobile No.</b></label>
+		<br>
+<br>
+	      <input type="int" placeholder="Mobile No." name="mob" max="10" style="padding:8px 1px 8px 8px;width:100%;color:black;" required>
+		<br>
+<br>
+
+
+	      <label for="fmob"><b>Father's Mobile No.</b></label>
+		<br>
+<br>
+	      <input type="int" placeholder="Father's Mobile No." name="fmob" max="10" style="padding:8px 1px 8px 8px;width:100%;color:black;" required>
+		<br>
+<br>
+
+
+	      <label for="email"><b>E-mail</b></label>
+		<br>
+<br>
+	      <input type="email" placeholder="E-mail" name="email" max="40" style="padding:8px 1px 8px 8px;width:100%;color:black;" required>
+		<br>
+<br>
+
+
+	      <label for="uname"><b>User Name</b></label>
+		<br>
+<br>
+	      <input type="varchar" placeholder="User Name" name="uname" style="padding:8px 1px 8px 8px;width:100%;color:black;" required>
+		<br>
+<br>
+
+	      <label for="pwd"><b>Password</b></label>
+	      <input type="password" placeholder="Password" name="pwd" required>
+
+	      <label for="cpwd"><b>Confirm Password</b></label>
+	      <input type="password" placeholder="Confirm Password" name="cpwd" required>
+		<button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<br>
+<footer>
+<table style="width:100%">
+<tr>
+  <th colspan="2" align="center">QUANTUM CLASSES</th>
+  <th align="center">Contacts</th>
+  <th align="center">Quick Links</th>
+</tr>
+<tr>
+  <td colspan="2" align="center">M.P.Nagar Zone II Bhopal</th>
+  <td align="center">+91 9293945773</th>
+  <td align="center"><a href="about.html" style="color:white;">About</a></th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center">yash1998@gmail.com</th>
+  <td align="center"><a href="courses_mains.html" style="color:white;">courses</th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center"></th>
+  <td align="center">student login</th>
+</tr>
+</table>
+</footer>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Education</title>
+		<meta name="viewport" content="width=deice-width,initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+<style>
+	*{
+		box-sizing: border-box;
+	 }
+	body{
+		font: Arial;
+		height:auto;
+	}
+	header{
+		background-color: #0943a0;
+		padding: 10px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	#header1{
+		backgroundcolor: #0943a0;
+		color: white;
+		padding: 5px 
+		}
+	
+	.add .but{ 
+		border: none;
+		font-size:30px;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: #33363a;
+		font-family: inherit; /* Important for vertical align on mobile phones */
+		margin: 0; /* Important for vertical align on mobile phones */
+	} 
+	footer{
+		background-color: #0943a0;
+		padding: 10px;
+	}
+	table,th{
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	td{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#a{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#b{
+		text-align: center;
+		font-size: 25px;
+		color: #678;
+	}
+	#c{
+		text-align: center;
+		font-size: 19px;
+		color: #333;
+	}
+	#d{
+		background: lightblue;
+		text-align: center;
+		font-size: 40px;
+		color: red;
+	}
+/* Navbar container */
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		font-family: Arial;
+	}
+
+/* Links inside the navbar */
+	.navbar a {
+		float: left;
+		font-size: 16px;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.navbar a.active {
+		background-color: #0943a0;
+		color: white;
+	}
+/* The dropdown container */
+	.dropdown {
+		float: left;
+		overflow: hidden;
+	}
+
+/* Dropdown button */
+	.dropdown .dropbtn {
+		font-size: 16px; 
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+		font-family: inherit; /* Important for vertical align on mobile phones */
+		margin: 0; /* Important for vertical align on mobile phones */
+	}
+
+/* Add a red background color to navbar links on hover */
+	.navbar a:hover, .dropdown:hover .dropbtn {
+		background-color: white;
+		color: black;
+	}
+
+/* Dropdown content (hidden by default) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+		float: none;
+		color: white;
+		padding: 12px 10px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+/* Add a grey background color to dropdown links on hover */
+	.dropdown-content a:hover {
+	background-color: white;
+	color: black;
+	}
+
+/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+#side{
+position:fixed; 
+top:250px; 
+right:40px; 
+width:40px; 
+z-index:999;
+}
+#side ul.icon-side li{
+border: solid 2px #33363a;
+display: block;
+float: left;
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+text-align:center;
+background:#fff;
+}
+#side ul.icon-side li a.side-links:link,a.side-links:active,a.side-links:visited{
+display: block;
+float: left; 
+padding:15px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a.side-links:hover{
+display: block;
+float: left;
+padding:10px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+#side ul.icon-side li a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+#side ul.icon-side li a.side-links i.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-facebook{
+    color: #3B5998;
+    display: inline-block;
+}
+
+.fa-facebook:hover{
+background: #3B5998;
+color:#fff;
+}
+.fa-facebook::before {
+    content: "\f09a";
+}
+
+.fa-twitter{
+color: #4099FF;
+display:inline-block;
+}
+
+.fa-twitter:hover{
+background: #4099FF;
+color:#fff;
+}
+.fa-twitter::before {
+    content: "\f099";
+}
+
+.fa-youtube{
+color: #bd071d;
+display:inline-block;
+}
+
+.fa-youtube:hover{
+background: #bd071d;
+color:#fff;
+}
+.fa-youtube-play::before {
+    content: "\f16a";
+}
+
+.header_highlight {
+    background-color: #33363a;
+}
+.accordion_headings {
+    padding: 0px;
+    color:white;
+    border-bottom: 1px solid #FFF;
+    cursor: pointer;
+    font-weight: normal;
+    background-color: #0943a0;
+    text-align: left;
+}
+.accordion_headings:hover {
+    padding: 0px;
+    color:white;
+    border-bottom: 1px solid #FFF;
+    cursor: pointer;
+    font-weight: normal;
+    background-color: #4073c4;
+    text-align: left;
+}
+
+.accordion_child {	
+    padding: 10px;
+    background-color: transparent;
+}
+</style>
+</head>
+
+
+
+<body>
+<header>
+<table align="center">
+<tr>
+<th><img src="logo.jpg" alt="logo" width=100 height="100"></th>
+<th id="header1" colspan="5">
+<table>
+<tr>
+<th>QUANTUM CLASSES</th>
+</tr>
+<tr>
+<td><p id="a">R-26,Opp. Railway Track, Zone-II,M.P Nagar, Bhopal(M.P)-462011</p></td>
+</tr>
+</table>
+</th>
+</table>
+</header>
+<br>
+<div class="navbar">
+  <a href="wd.html">Home</a>
+  <a href="about.html">About us</a>
+  <div class="dropdown">
+    <a class="dropbtn"><a href="">Courses 
+      <i class="fa fa-caret-down"></i>
+    </a>
+    <div class="dropdown-content">
+      <a href="courses_mains.html">JEE(Mains)</a>
+      <a href="courses_adv.html">JEE(Adv.)</a>
+      <a href="courses_aipmt.html">AIPMT</a>
+      <a href="courses_aiims.html">AIIMS</a>
+    </div>
+  </div> 
+<a href="adm.html">Admission</a>
+<a href="fac.html">Faculties</a>
+	<div class="dropdown">
+  <a class="dropbtn">Login
+ <i class="fa fa-caret-down"></i></a>
+   <div class="dropdown-content">
+     <a href="slogin.html">Student Login</a>
+      <a href="alogin.html">Admin Login</a>
+</div>
+</div>
+<a class="active" href="faqs.html">FAQ's</a>
+</div>
+<br>
+<div id="side">
+<ul class="icon-side">
+<li>
+<a class="side-links facebook" href="#">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links twitter" href="#">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links youbute" href="#">
+<i class="fa fa-youtube">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<br>
+<div id="1-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"How does the study environment of Mitesh Rathi Classes differs from other institutes?"
+</img>
+</div>
+<div id="1-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>The Teaching Methodology implemented in Mitesh Rathi Classes is excellent. 
+Syllabus is completed in time with proper academic planning and all the topics of IIT JEE Main &amp; Advanced and School 
+syllabus too are covered. Test Series, Study Hours, Self Study &amp; Revision classes gives additional advantage to the students 
+in Mitesh Rathi Classes.</p></div>
+</div>
+<div id="2-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"How does Mitesh Rathi Classes balance School exam results as well as IIT -JEE Main & Advanced results?"
+</img>
+</div>
+<div id="2-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>With our specially designed tools such as CRQ & Packages, we manage both Board Level & JEE-Main/Advanced results 
+simultaneously. CRQ (Class Room Questions) includes Board Level Questions followed by IIT -JEE Main & Advanced questions. Packages consist of Board/JEE 
+Main & Advanced level questions with answers which make our students competent for all exams. MRC also conducts continuous Test series in order to 
+prepare the environment of Board/JEE Main & Advanced exams.</p></div>
+</div>
+<div id="3-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"How does teaching experience of Mitesh Rathi Classes Faculty has?"
+</img>
+</div>
+<div id="3-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>The Faculty of Mitesh Rathi Classes are very well experienced & focused towards achieving the goal by providing planned, 
+systematic & time bounded coaching. MRC faculty knows the art of extracting the best out of each student by the continuous encouragement. Each faculty 
+possesses an excellent Academic & performance background.</p>
+</div></div>
+<div id="4-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"What is the Methodology of Teaching at Mitesh Rathi Classes?"
+</img>
+</div>
+<div id="4-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>In Mitesh Rathi Classes all the topics are covered efficiently. It includes stepwise process of the completion of Board 
+level along with IIT-JEE Main & Advanced syllabus.</p></div>
+</div>
+<div id="5-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"What is Batch Re-Shuffling Tests and how it is beneficial for the students?"
+</img>
+</div>
+<div id="5-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>Batch Re-shuffling Test creates healthy competitive environment among the students. By this, students are motivated 
+to perform to their best ability so that they can get the best batch. This opportunity is provided to each student irrespective of their 
+past performance.</p></div>
+</div>
+<div id="6-header" class="accordion_headings header_highlight">
+<img src="q.jpg" width="32" height="28" align="absmiddle" style="padding-right:12px;">
+"How does Mitesh Rathi Classes balance School exam results as well as IIT -JEE Main & Advanced results?"
+</img>
+</div>
+<div id="6-content" style="display: block; overflow: hidden; height: 100px; opacity: 1;"> 
+<div class="accordion_child"><p>With our specially designed tools such as CRQ & Packages, we manage both Board Level & JEE-Main/Advanced results 
+simultaneously. CRQ (Class Room Questions) includes Board Level Questions followed by IIT -JEE Main & Advanced questions. Packages consist of Board/JEE 
+Main & Advanced level questions with answers which make our students competent for all exams. MRC also conducts continuous Test series in order to 
+prepare the environment of Board/JEE Main & Advanced exams.</p></div>
+</div>
+<br>
+<br>
+<footer>
+<table style="width:100%">
+<tr>
+  <th colspan="2" align="center">QUANTUM CLASSES</th>
+  <th align="center">Contacts</th>
+  <th align="center">Quick Links</th>
+</tr>
+<tr>
+  <td colspan="2" align="center">M.P.Nagar Zone II Bhopal</th>
+  <td align="center">+91 9293945773</th>
+  <td align="center"><a href="about.html" style="color:white;">About</a></th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center">yash1998@gmail.com</th>
+  <td align="center"><a href="courses_mains.html" style="color:white;">courses</th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center"></th>
+  <td align="center">student login</th>
+</tr>
+</table>
+</footer>
+<script>
+$(document).ready(function(){
+    $("#1-header").click(function(){
+        $("#1-content").toggle();
+    });
+    $("#2-header").click(function(){
+        $("#2-content").toggle();
+    });
+    $("#3-header").click(function(){
+        $("#3-content").toggle();
+    });
+    $("#4-header").click(function(){
+        $("#4-content").toggle();
+    });
+    $("#5-header").click(function(){
+        $("#5-content").toggle();
+    });
+    $("#6-header").click(function(){
+        $("#6-content").toggle();
+    });
+});
+</script>
+</body>
+
+</html>
