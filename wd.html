@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Education</title>
+		<meta name="viewport" content="width=deice-width,initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	*{
+		box-sizing: border-box;
+	 }
+	body{
+		font: Arial;
+	}
+	header{
+		background-color: #0943a0;
+		padding: 10px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	#header1{
+		backgroundcolor: #0943a0;
+		color: white;
+		padding: 5px 
+		} 
+	footer{
+		background-color: #0943a0;
+		padding: 10px;
+	}
+	table,th{
+		text-align: center;
+		font-size: 30px;
+		color: white;
+	}
+	td{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#a{
+		text-align: center;
+		font-size: 20px;
+		color: white;
+	}
+	#b{
+		text-align: center;
+		font-size: 25px;
+		color: #678;
+	}
+	#c{
+		text-align: center;
+		font-size: 19px;
+		color: #333;
+	}
+	#d{
+		background: lightblue;
+		text-align: center;
+		font-size: 40px;
+		color: red;
+	}
+/* Navbar container */
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		font-family: Arial;
+	}
+
+/* Links inside the navbar */
+	.navbar a {
+		float: left;
+		font-size: 16px;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.navbar a.active {
+		background-color: #0943a0;
+		color: white;
+	}
+
+ 
+/* The dropdown container */
+	.dropdown {
+		float: left;
+		overflow: hidden;
+	}
+
+/* Dropdown button */
+	.dropdown .dropbtn {
+		font-size: 16px; 
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+4		background-color: inherit;
+		font-family: inherit; /* Important for vertical align on mobile phones */
+		margin: 0; /* Important for vertical align on mobile phones */
+	}
+
+/* Add a white background color to navbar links on hover */
+	.navbar a:hover, .dropdown:hover .dropbtn {
+		background-color: white;
+		color: black;
+	}
+
+/* Dropdown content (hidden by default) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #333;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+		float: none;
+		color: white;
+		padding: 12px 10px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+/* Add a grey background color to dropdown links on hover */
+	.dropdown-content a:hover {
+	background-color: white;
+	color: black;
+	}
+
+/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+.slideshow-container {
+		max-width: 800px;
+		position: relative;
+		margin: auto;
+	}
+
+
+	.mySlides {
+	 	display: none;
+	}
+
+
+
+	.text {
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+	}
+
+
+	.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	}
+
+/* The dots/bullets/indicators */
+	.dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+		background-color: #717171;
+	}
+
+/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+
+	@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+	#map{
+		alin: center;
+	}
+.qc{
+ font-family:sans-serif;
+ font-weight:bold;
+ color: green;
+ text-transform:uppercase;
+}
+
+#side{
+position:fixed; 
+top:250px; 
+right:40px; 
+width:40px; 
+z-index:999;
+}
+#side ul.icon-side li{
+border: solid 2px #33363a;
+display: block;
+float: left;
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+text-align:center;
+background:#fff;
+}
+#side ul.icon-side li a.side-links:link,a.side-links:active,a.side-links:visited{
+display: block;
+float: left; 
+padding:15px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a.side-links:hover{
+display: block;
+float: left;
+padding:10px; 
+font-size:25px; 
+list-style-type: none;
+margin:0px;
+vertical-align: middle;
+}
+#side ul.icon-side li a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+#side ul.icon-side li a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+#side ul.icon-side li a.side-links i.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-facebook{
+    color: #3B5998;
+    display: inline-block;
+}
+
+.fa-facebook:hover{
+background: #3B5998;
+color:#fff;
+}
+.fa-facebook::before {
+    content: "\f09a";
+}
+
+.fa-twitter{
+color: #4099FF;
+display:inline-block;
+}
+
+.fa-twitter:hover{
+background: #4099FF;
+color:#fff;
+}
+.fa-twitter::before {
+    content: "\f099";
+}
+
+.fa-youtube{
+color: #bd071d;
+display:inline-block;
+}
+
+.fa-youtube:hover{
+background: #bd071d;
+color:#fff;
+}
+.fa-youtube-play::before {
+    content: "\f16a";
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<header>
+<table align="center">
+<tr>
+<th><img src="logo.jpg" alt="logo" width=100 height="100"></th>
+<th id="header1" colspan="5">
+<table>
+<tr>
+<th>QUANTUM CLASSES</th>
+</tr>
+<tr>
+<td><p id="a">R-26,Opp. Railway Track, Zone-II,M.P Nagar, Bhopal(M.P)-462011</p></td>
+</tr>
+</table>
+</th>
+</table>
+</header>
+<br>
+<div class="navbar">
+  <a class="active" href="wd.html">Home</a>
+  <a href="about.html">About us</a>
+  <div class="dropdown">
+    <a class="dropbtn">Courses 
+      <i class="fa fa-caret-down"></i>
+    </a>
+    <div class="dropdown-content">
+      <a href="courses_mains.html">JEE(Mains)</a>
+      <a href="courses_adv.html">JEE(Adv.)</a>
+      <a href="courses_aipmt.html">AIPMT</a>
+      <a href="courses_aiims.html">AIIMS</a>
+    </div>
+  </div> 
+<a href="adm.html">Admission</a>
+<a href="fac.html">Faculties</a>
+	<div class="dropdown">
+  <a class="dropbtn">Login
+ <i class="fa fa-caret-down"></i></a>
+   <div class="dropdown-content">
+     <a href="slogin.html">Student Login</a>
+      <a href="alogin.html">Admin Login</a>
+</div>
+</div>
+<a href="faqs.html">FAQ's</a>
+</div>
+<br>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="1.jpg" alt="page 1" width=100% height="400">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="2.jpg" alt="page 2" width=100% height="400">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="3.jpg" alt="page 3" width=100% height="400">
+    <div class="text">Caption Three</div>
+  </div>
+</div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="11.jpg" alt="page 4" width=100% height="400">
+    <div class="text">Caption Four</div>
+  </div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<br>
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(23.2306,77.4370),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<br>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+<div id="side">
+<ul class="icon-side">
+<li>
+<a class="side-links facebook" href="#">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links twitter" href="#">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li>
+<a class="side-links youbute" href="#">
+<i class="fa fa-youtube">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<br>
+<p id="d">Welcome to 
+<span class="qc">Quantum Classes</p>
+<p id="b">
+Education is not learning of facts but the training of the mind to think. - Albert Einstein
+</p>
+<p id="c">
+MRC is a coaching institute in Bhopal for preparation of JEE Main, JEE Advanced, Board and School exams starting from 6th to 12th classes. We focus on building a strong foundation of knowledge and concepts in students. Which provide them an excellent platform for various school and competitive exams. The best academic support, systematic and comprehensive study material, Test Series program and individual attention provided to the students helps them to meet their career goals and objectives. All these factors make it best coaching institute in Bhopal. 
+</p>
+<footer>
+<table style="width:100%">
+<tr>
+  <th colspan="2" align="center">QUANTUM CLASSES</th>
+  <th align="center">Contacts</th>
+  <th align="center">Quick Links</th>
+</tr>
+<tr>
+  <td colspan="2" align="center">M.P.Nagar Zone II Bhopal</th>
+  <td align="center">+91 9293945773</th>
+  <td align="center"><a href="about.html" style="color:white;">About</a></th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center">yash1998@gmail.com</th>
+  <td align="center"><a href="courses_mains.html" style="color:white;">courses</th>
+</tr>
+<tr>
+  <td colspan="2" align="center"></th>
+  <td align="center"></th>
+  <td align="center">student login</th>
+</tr>
+</table>
+</footer>
+</body>
+</html>
+
+
+
+
+

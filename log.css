@@ -1,0 +1,99 @@
+#two{
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.15);
+    padding:20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color:white;
+}
+img{
+
+    margin-left:50px;
+    opacity: 1;
+}
+.one{
+    box-sizing:content-box;
+    width: 300px;
+    padding: 25px;
+    margin-top:10px;
+    margin-left: 450px;
+    position: relative;
+    text-align: left;\
+    opacity: 1;
+}
+#tou{
+    
+    font-size:0.9rem; 
+
+}
+h1 {
+font-weight: 500;
+    font-size: 30px;
+    font-size: 1.875rem;
+    letter-spacing: -.6px;  
+margin-left: 30px;  
+}
+input[type=text] {
+    border: 1px solid #9d9fa2;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 0 12px;
+    
+    width: 100%;
+    height: 30px;
+}
+input[type=uname] {
+    border: 1px solid #9d9fa2;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 0 12px;
+    
+    width: 100%;
+    height: 30px;
+}input[type=password] {
+    border: 1px solid #9d9fa2;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 0 12px;
+    
+    width: 100%;
+    height: 30px;
+}
+span{
+    margin-left: 2px;
+     font-size: 1rem;
+}
+button{
+      -webkit-font-smoothing: antialiased;
+    height: 40px;
+    padding: 0 34px;
+    margin-left:3px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #0065ff;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    transition-property: background-color,border-color,color;
+    transition-duration: .12s;
+    transition-timing-function: ease-out;
+    width: 100%;
+    cursor: pointer;
+}
+#but{
+    margin-left: 10px;
+    font-weight: 700;
+
+}
+#act{
+    position: absolute;
+    background: #fff;
+   
+    margin-left: 50px;
+    padding: 0 8px;
+    white-space: nowrap;
+}
+#sin{
+     color: #fff;
+    font-weight: 700;
+    background-color: black;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Education</title>
+		<meta name="viewport" content="width=deice-width,initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=radio], input[type=int], input[type=email], input[type=varchar] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+</style>
+</head>
+
+
+
+<body>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;padding:20px;font-size:30px;background-color:#33363a;color:white;"
+>Admission Form <i class="fa fa-caret-right"></i></button>
+<div id="id01" class="modal">
+  <form class="modal-content" action="adms.php" method="post">
+
+	<div class="container" style="background-color:#f1f1f1;padding:16px;">
+	      <label for="sname"><b>Student Name</b></label>
+	      <input type="text" placeholder="Enter your Name" name="sname" required>
+	
+	      <label for="Fname"><b>Father's Name </b></label>
+	      <input type="text" placeholder="Enter Father's Name" name="fname" required>
+
+	
+	      <label for="Add"><b>Address</b></label>
+	      <input type="text" placeholder="Address" name="add" required>
+	        
+		
+
+	      <label for="gen"  style="padding:10px 10px 10px 0px;"><b>Gender</b></label>
+	      <input type="radio" name="gen" value="m" required>Male
+	      <input type="radio" name="gen" value="f" required>Female
+		<br>
+<br>
+	      <label for="cou"><b>Course</b></label>
+		<br>
+<br>
+			<select name="cou" style="padding:10px 16px;">
+    			<option value="mains">IIT-JEE(Mains)</option>
+    			<option value="advance">IIT-JEE(Advance)</option>
+    			<option value="aiims">AIIMS</option>
+    			<option value="aipmt">AIPMT</option>
+			<option value="just boards">JUST BOARDS</option>
+  			</select>
+		<br>
+<br>
+	      <label for="ip"><b>Integrated Program</b></label>
+		<br>
+<br>
+			<select name="ip" style="padding:10px 16px">
+    			<option value="4">4-year Integrated Program</option>
+    			<option value="3">3-year Integrated Program</option>
+    			<option value="2">2-year Integrated Program</option>
+    			<option value="1">1-year Integrated Program</option>
+			<option value="cc">Crash Course</option>
+  			</select>
+		<br>
+<br>
+	      <label for="mob"><b>Mobile No.</b></label>
+		<br>
+<br>
+	      <input type="int" placeholder="Mobile No." name="mob" max="10" style="padding:8px 1px 8px 8px;width:100%;color:#cccccc;" required>
+		<br>
+<br>
+
+
+	      <label for="fmob"><b>Father's Mobile No.</b></label>
+		<br>
+<br>
+	      <input type="int" placeholder="Father's Mobile No." name="fmob" max="10" style="padding:8px 1px 8px 8px;width:100%;color:#cccccc;" required>
+		<br>
+<br>
+
+
+	      <label for="email"><b>E-mail</b></label>
+		<br>
+<br>
+	      <input type="email" placeholder="E-mail" name="email" max="40" style="padding:8px 1px 8px 8px;width:100%;color:#cccccc;" required>
+		<br>
+<br>
+
+
+	      <label for="uname"><b>User Name</b></label>
+		<br>
+<br>
+	      <input type="varchar" placeholder="User Name" name="uname" style="padding:8px 1px 8px 8px;width:100%;color:#cccccc;" required>
+		<br>
+<br>
+
+	      <label for="pwd"><b>Password</b></label>
+	      <input type="password" placeholder="Password" name="pwd" required>
+
+	      <label for="cpwd"><b>Confirm Password</b></label>
+	      <input type="password" placeholder="Confirm Password" name="cpwd" required>
+		<button type="submit" name="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
